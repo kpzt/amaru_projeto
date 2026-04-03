@@ -8,16 +8,65 @@
 <body>
 
 <header>
-  <h1 id="titulo"></h1>
+  <h1 id="titulo">Projeto</h1>
 </header>
 
-<section class="detalhes">
-  <p id="descricao"></p>
-
-  <div class="galeria" id="galeria"></div>
+<!-- IMAGEM DE DESTAQUE -->
+<section class="hero-projeto">
+  <img id="imagem-destaque" src="imagens/img1.jpeg" alt="Projeto">
 </section>
 
-<a href="index.html" class="btn">← Voltar</a>
+<!-- CONTEÚDO -->
+<section class="container">
+
+  <!-- DESCRIÇÃO -->
+  <div class="descricao">
+    <h2>Sobre o projeto</h2>
+    <p id="descricao">
+      Estrutura em madeira de eucalipto tratado, ideal para áreas externas,
+      oferecendo resistência, durabilidade e um acabamento sofisticado.
+    </p>
+  </div>
+
+  <!-- INFORMAÇÕES -->
+  <div class="info">
+    <h2>Informações Técnicas</h2>
+    <ul>
+      <li><strong>Madeira:</strong> Eucalipto tratado</li>
+      <li><strong>Durabilidade:</strong> Alta resistência</li>
+      <li><strong>Uso:</strong> Interno e externo</li>
+      <li><strong>Projeto:</strong> Sob medida</li>
+      <li><strong>Acabamento:</strong> Premium</li>
+    </ul>
+  </div>
+
+  <!-- GALERIA -->
+  <div class="galeria" id="galeria"></div>
+
+  <!-- DIFERENCIAIS (DINÂMICO PELO JS) -->
+  <div class="diferenciais">
+    <h2>Diferenciais do Projeto</h2>
+  </div>
+
+  <!-- BOTÃO -->
+  <div class="acao">
+    <a href="https://wa.me/5531987862291" class="btn destaque">
+      Solicitar Orçamento
+    </a>
+  </div>
+
+  <!-- VOLTAR -->
+  <div class="voltar">
+    <a href="index.html" class="btn">← Voltar</a>
+  </div>
+
+</section>
+
+<!-- MODAL (IMAGEM GRANDE) -->
+<div id="modal" class="modal">
+  <span id="fechar">&times;</span>
+  <img id="imgModal">
+</div>
 
 <script src="script2.js"></script>
 

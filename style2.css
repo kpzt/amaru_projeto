@@ -1,17 +1,159 @@
-.detalhes {
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+  background: #2e2e2e;
+  color: white;
   text-align: center;
   padding: 20px;
 }
 
+/* HERO */
+.hero-projeto img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+
+  /* ANIMAÇÃO */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TÍTULOS */
+h2 {
+  margin-top: 30px;
+  color: #333;
+}
+
+/* DESCRIÇÃO */
+.descricao p {
+  line-height: 1.6;
+}
+
+/* INFORMAÇÕES */
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  background: white;
+  margin: 5px 0;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* GALERIA */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
   margin-top: 20px;
 }
 
 .galeria img {
-  width: 300px;
+  width: 100%;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* DIFERENCIAIS */
+.diferenciais p {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 6px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e2e2e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #444;
+}
+
+/* BOTÃO WHATSAPP */
+.destaque {
+  background: #25d366;
+}
+
+.destaque:hover {
+  background: #1ebe5d;
+}
+
+/* CENTRALIZAR BOTÕES */
+.acao, .voltar {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* MODAL (IMAGEM GRANDE) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+/* BOTÃO FECHAR */
+.modal span {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
 }
