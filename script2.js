@@ -19,12 +19,12 @@ const dados = {
 
   telhado: {
     titulo: "Telhado",
-    descricao: "Estruturas de telhado em madeira de eucalipto tratado, ideais para casas e áreas externas. Alta resistência contra chuva, sol e desgaste do tempo.",
-    imagens: ["img1.jpeg","img2.jpeg","img3.jpeg","img1.jpeg","img2.jpeg"],
+    descricao: "Estruturas de telhado em madeira de eucalipto tratado, ideais para casas e áreas externas.",
+    imagens: ["img1.jpeg","img2.jpeg","img3.jpeg"],
     diferenciais: [
-      "Estrutura reforçada para telhados",
+      "Estrutura reforçada",
       "Alta resistência climática",
-      "Madeira tratada contra cupins",
+      "Madeira tratada",
       "Longa durabilidade",
       "Acabamento profissional"
     ]
@@ -32,24 +32,23 @@ const dados = {
 
   playground: {
     titulo: "Playground",
-    descricao: "Playgrounds seguros e personalizados, ideais para crianças em áreas de lazer.",
-    imagens: ["img2.jpeg","img3.jpeg","img2.jpeg","img3.jpeg"],
+    descricao: "Playgrounds seguros e personalizados.",
+    imagens: ["img2.jpeg","img3.jpeg"],
     diferenciais: [
-      "Estrutura segura para crianças",
+      "Seguro para crianças",
       "Madeira resistente",
       "Design personalizado",
-      "Ideal para áreas externas",
+      "Uso externo",
       "Alta durabilidade"
     ]
   },
 
   pergolado: {
     titulo: "Pergolado",
-    descricao: "Pergolados modernos que valorizam áreas externas como jardins e áreas gourmet.",
-    imagens: ["img3.jpeg","img1.jpeg","img3.jpeg","img1.jpeg"],
+    descricao: "Pergolados modernos para áreas externas.",
+    imagens: ["img3.jpeg","img1.jpeg"],
     diferenciais: [
       "Design moderno",
-      "Ideal para jardins e áreas gourmet",
       "Resistente ao tempo",
       "Acabamento premium",
       "Valoriza o ambiente"
@@ -58,8 +57,20 @@ const dados = {
 
   personalizado: {
     titulo: "Projeto Personalizado",
-    descricao: "Projetos feitos sob medida para atender qualquer necessidade com qualidade e acabamento premium.",
-    imagens: ["img6.jpeg","img1.jpeg","img6.jpeg","img1.jpeg"],
+    descricao: "Projetos feitos sob medida com acabamento premium.",
+    imagens: [
+      "img6.jpeg",
+      "img1.jpeg",
+      "img6.jpeg",
+      "img1.jpeg",
+      "img7.jpeg",
+      "img8.png",
+      "img9.png",
+      "img10.jpeg",
+      "img11.jpeg",
+      "img12.jpeg",
+      "img13.jpeg"
+    ],
     diferenciais: [
       "100% sob medida",
       "Alta qualidade",
@@ -84,7 +95,7 @@ if (dados[projeto]) {
   // LIMPAR GALERIA
   galeria.innerHTML = "";
 
-  // ADICIONAR IMAGENS COM CLICK (MODAL)
+  // ADICIONAR IMAGENS
   dados[projeto].imagens.forEach(img => {
     const imagem = document.createElement("img");
     imagem.src = "imagens/" + img;
@@ -98,7 +109,7 @@ if (dados[projeto]) {
     galeria.appendChild(imagem);
   });
 
-  // DIFERENCIAIS DINÂMICOS
+  // DIFERENCIAIS
   if (dados[projeto].diferenciais) {
     diferenciais.innerHTML = "<h2>Diferenciais do Projeto</h2>";
 
